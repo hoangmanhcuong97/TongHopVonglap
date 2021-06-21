@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p><h3>Game đoán số</h3></p>
+<button onclick="enterNumber()">Play</button>
+<script>
+  //bai 1
+  //     for (i=1;i<=100;i++) {
+  //       document.write(i + "<br>");
+  //       if (i == 99) {
+  //         document.write ("Da hoan thanh"+"<br>");
+  //       }
+  //     }
+  //bai 2
+  //     let T = +prompt("Nhap gia tri nhiet do hien tai vao:");
+  //     document.write("Gia tri nhiet do vua nhap vao la:"+T);
+  //     while (T<20){
+  //       alert("tang nhiet do len");
+  //       T = +prompt("Nhap gia tri khac");
+  //     }
+  //     while (T>100){
+  //       alert("Giam nhiet do xuong");
+  //       T = +prompt("Nhap gia tri khac")
+  //     }
+  //bai 3
+  //     i=1;
+  //     a=0;
+  //     b=1;
+  // while (i<=20){
+  //   c = a + b;
+  //   i++;
+  //   document.write("gia tri so fibonaci:"+c+"<br>");
+  //   a=b; b=c;
+  // }
+  //bai 4
+  //       let number = +prompt("nhap vao so luong so ban muon in ra vao day");
+  //           i=1;
+  //           a=0;
+  //           b=1;
+  //           let d = false;
+  //       while (i<=number){
+  //         c = a + b;
+  //         i++;
+  //         document.write("gia tri so fibonaci:"+c+"<br>");
+  //         a=b;
+  //         b=c;
+  //         if (c % 5==0 &&  d == false ){
+  //           document.write("so dau tien chia het cho 5 la:"+c+"<br>");
+  //           d = true;
+  //         }
+  //       }
+  //bai 5
+  //         let number = +prompt("nhap vao so luong so ban muon tinh tong vao day");
+  //         i=1;a=0;b=1;Tong = 0;
+  //         while (i<=number) {
+  //           c = a + b;
+  //           document.write("gia tri so fibonaci:" + c + "<br>");
+  //           i++;
+  //           a = b;
+  //           b = c;
+  //           Tong += c;
+  //         }
+  //        document.write("Tong la:"+Tong);
+  // bai 6
+  // cach 1
+  //          let number = +prompt("Nhap vao so luong ban muon tinh tong vao day");
+  //          let dem = 0;
+  //          let a = 0;
+  //          let tong = 0;
+  //          while (dem<number){
+  //            if (a%7==0){
+  //              document.write("So chia het cho 7:"+ a +"<br>");
+  //              tong+=a;
+  //              dem++;
+  //            }
+  //            a++;
+  //          }
+  //         document.write("Tong nhung so chia het cho 7 la:"+tong+"<br>");
+  // cach 2
+  //        let a=0;
+  //        let tong=0;
+  //         let number = +prompt("Nhap vao so luong ban muon tinh tong vao day");
+  //         for (let i = 0; i < number; i++) {
+  //           document.write("Nhung so chia het cho 7:"+a+ "<br>");
+  //           tong += a;
+  //          a = a + 7;
+  //        }
+  //         document.write("Nhung so chia het cho 7:"+a+ "<br>");
+  //         document.write("Tong nhung so chia het cho 7 la:"+tong+"<br>");
+  // bai 7
+  // for (let i = 1; i <=100 ; i++) {
+  //   if (i%3==0){
+  //     if (i%5==0){
+  //       document.write(i+": FizzBuzz" +"<br>");
+  //     }else {
+  //       document.write(i+": Fizz"+"<br>");
+  //     }
+  //   }else if (i%5==0){
+  //     document.write(i+": Buzz"+"<br>");
+  //   }
+  // }
+
+  // bai 8
+  function enterNumber(){
+    let a = +prompt("Nhập giá trị đầu tiên của khoảng bạn muốn:");
+    let b = +prompt("Nhập giá trị cuối khoảng bạn muốn");
+    let c = Math.round(Math.random()*(b-a)+a);
+    // document.write("d ="+d+"<br>");
+
+      for(i=3;i>0;i--){
+        let d = +prompt("Nhập số bạn muốn đoán");
+        if (d == c){
+          alert("Chúc mừng bạn đã đoán đúng");
+          break;
+        }else {
+           let f=i-1;
+          alert("Bạn còn "+ f +" lượt nữa");
+        }
+      }
+  }
+</script>
+</body>
+</html>
